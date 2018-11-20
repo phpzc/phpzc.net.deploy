@@ -58,7 +58,7 @@ task('artisan:config:cache', function () {
     //不做配置缓存
 });
 
-
+after('artisan:config:cache','artisan:storage:link');
 
 
 // 定义一个后置钩子，当 deploy:failed 任务被执行之后，Deployer 会执行 deploy:unlock 任务
